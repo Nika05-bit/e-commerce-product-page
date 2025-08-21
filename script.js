@@ -158,13 +158,20 @@ pageThumbnails.forEach((thumb, index) => {
     updateLightbox();
   });
 });
-// Mobile Menu
-const menuIcon = document.querySelector('.menu-icon');
-const navLinks = document.querySelector('.nav-links');
+const menuIcon = document.querySelector(".menu-icon");
+const mobileMenu = document.querySelector(".mobile-menu");
+const closeMenu = document.querySelector(".close-menu");
 
-menuIcon.addEventListener('click', () => {
-  navLinks.classList.toggle('active');
+// Open menu
+menuIcon.addEventListener("click", () => {
+  mobileMenu.classList.remove("hidden");
 });
+
+// Close menu
+closeMenu.addEventListener("click", () => {
+  mobileMenu.classList.add("hidden");
+});
+
 // Mobile Image Slider
 const mobilePrev = document.querySelector('.mobile-prev');
 const mobileNext = document.querySelector('.mobile-next');
