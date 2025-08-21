@@ -159,18 +159,23 @@ pageThumbnails.forEach((thumb, index) => {
   });
 });
 const menuIcon = document.querySelector(".menu-icon");
-const mobileMenu = document.querySelector(".mobile-menu");
 const closeMenu = document.querySelector(".close-menu");
+const navLinks = document.querySelector(".nav-links");
 
 // Open menu
 menuIcon.addEventListener("click", () => {
-  mobileMenu.classList.remove("hidden");
+  navLinks.classList.add("active");
+  menuIcon.style.display = "none";
+  closeMenu.style.display = "block";
 });
 
 // Close menu
 closeMenu.addEventListener("click", () => {
-  mobileMenu.classList.add("hidden");
+  navLinks.classList.remove("active");
+  menuIcon.style.display = "block";
+  closeMenu.style.display = "none";
 });
+
 
 // Mobile Image Slider
 const mobilePrev = document.querySelector('.mobile-prev');
